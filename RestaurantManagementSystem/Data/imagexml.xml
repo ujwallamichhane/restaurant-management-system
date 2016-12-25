@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Images>
+   <image name="burger.jpg" order="1"/>
+  <image name="images.jpg" order="2"/>
+  <image name="restaurant_0.jpg" order="3"/>
+
+  </Images>

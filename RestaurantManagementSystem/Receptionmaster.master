@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Receptionmaster.master.cs" Inherits="Receptionmaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header">
+            <img src="images/restaurant_0.jpg"style="width:100%;height:350px" />
+        </div>
+        <div id="navbar">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" Width="100%">
+                <Items>
+                    <asp:MenuItem Text="Restaurant Billing" Value="Restaurant Billing" NavigateUrl="~/Billing.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Online Order Billing" Value="Online Order Billing" NavigateUrl="~/OnlineBilling.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Today's Order.aspx" Text="Today's Order" Value="Today's Order"></asp:MenuItem>
+                </Items>
+                <StaticMenuItemStyle HorizontalPadding="30px" />
+            </asp:Menu>
+        </div>
+        <div id="body">
+
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            <p style="text-align:center">
+                            Copyright@2016
+                Designed And Developed By:Elina Roka
+            </p>
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>

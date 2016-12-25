@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Restaurant Management System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <div id ="header" runat="server">
+            <asp:Image ID="headerimage" runat="server" ImageUrl="~/images/restaurant_0.jpg" style="width:100%;height:350px" BorderStyle="Double"/>
+
+        </div>
+           
+            <div id="navbar" runat="server" style="float:left;width:10%;padding:15px;margin:2px">
+                <asp:Menu ID="adminmenu" runat="server" Orientation="Vertical">
+                    <Items>
+                       
+                        <asp:MenuItem Text="Manage Users" Value="Manage Users" NavigateUrl="~/User.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Staff" Value="Staff" NavigateUrl="~/Employee.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Orders" Value="Orders" NavigateUrl="~/Order.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Menu" Value="Menu" NavigateUrl="~/Menu.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Billing" Value="Billing" NavigateUrl="~/Billing.aspx"></asp:MenuItem>
+                       
+                        <asp:MenuItem Text="Food" Value="Food" NavigateUrl="~/Food.aspx"></asp:MenuItem>
+                       
+                        <asp:MenuItem NavigateUrl="~/FoodCategory.aspx" Text="FoodCategory" Value="FoodCategory"></asp:MenuItem>
+                       
+                        <asp:MenuItem NavigateUrl="~/TableName.aspx" Text="Create Table" Value="Create Table"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Today's Order.aspx" Text="Today's Order" Value="Today's Order"></asp:MenuItem>
+                       
+                    </Items>
+
+                    <StaticHoverStyle BackColor="White" ForeColor="#3399FF" />
+                    <StaticMenuItemStyle BackColor="#3333CC" Font-Bold="True" Font-Underline="True" ForeColor="White" ItemSpacing="1px" VerticalPadding="10px" />
+                    <StaticMenuStyle BackColor="#3333CC" Width="100%" />
+
+                </asp:Menu>
+                 <asp:Button ID="btnlogout" runat="server" OnClick="btnlogout_Click" Text="LogOut" />
+            </div>
+            <div id="body" runat="server" style="float:left;width:86%">
+                <div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        <asp:Literal ID="ltrmsg" runat="server"></asp:Literal>
+                    </asp:ContentPlaceHolder>
+             </div>
+            </div>
+            <div id="footer" style="width:100%;float:left;text-align:center">
+                <p>
+                    Copyright@2016<br/>
+                    Developed and Maintained By:Elina Roka
+                </p>
+            </div>
+
+    </form>
+</body>
+</html>

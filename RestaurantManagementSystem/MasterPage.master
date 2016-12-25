@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="Timer2" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:Image ID="Image1" runat="server" Height="400px" width="100%" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+        <div class="header" runat="server">
+            <%--<img src="Data/images/restaurant_0.jpg" id="homepageimage" style="height: 350px; width: 100%" />--%>
+
+
+        </div>
+        <div class="Wrapper" runat="server">
+            <div class="nav-bar" runat="server" style="width: 100%">
+                <asp:Menu ID="Menu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Place Order" Value=" Place Order" NavigateUrl="~/Order.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact us" Value="Contact us"></asp:MenuItem>
+                        <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/login.aspx"></asp:MenuItem>
+
+                    </Items>
+
+                    <StaticHoverStyle BackColor="White" Font-Italic="True" ForeColor="#333300" />
+                    <StaticMenuItemStyle BackColor="#3333CC" Font-Names="Arial Black" Font-Size="Medium" Font-Underline="True" ForeColor="White" HorizontalPadding="105px" ItemSpacing="1px" Width="100%" />
+
+                    <StaticMenuStyle Width="100%" />
+
+                </asp:Menu>
+            </div>
+            <div class="auto-style1" runat="server">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer" style="width: 100%">
+            <p style="text-align: center">
+                Copyright © 2016<br />
+                Developed and Maintained By :Elina Roka
+            </p>
+
+        </div>
+    </form>
+</body>
+</html>
